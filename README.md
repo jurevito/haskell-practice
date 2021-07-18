@@ -1,7 +1,7 @@
 # Haskell practice
 Repository for learning to code in Haskell. Good resources for learning:
-- [Learn You a Haskell for Great Good!](https://www.learnyouahaskell.com/chapters): book with a lot of examples and basic theory.
-- [Some university lectures](https://www.seas.upenn.edu): lectures and homework assignments.
+- [Learn You a Haskell for Great Good!](http://www.learnyouahaskell.com/chapters): book with a lot of examples and basic theory.
+- [Some university lectures 2013](https://www.seas.upenn.edu/~cis194/spring13/lectures.html): lectures and homework assignments.
 
 ### List manipulation
 ```haskell
