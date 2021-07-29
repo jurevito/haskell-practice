@@ -1,7 +1,10 @@
 # Haskell practice
 Repository for learning to code in Haskell. Good resources for learning:
-- [Learn You a Haskell for Great Good!](http://www.learnyouahaskell.com/chapters) book with a lot of examples and basic theory.
-- [Some university lectures 2013](https://www.seas.upenn.edu/~cis194/spring13/lectures.html) lectures and homework assignments.
+- Book with a lot of examples and basic theory: [Learn You a Haskell for Great Good!](http://www.learnyouahaskell.com/chapters) 
+- Lectures and homework assignments: [Some university lectures 2013](https://www.seas.upenn.edu/~cis194/spring13/lectures.html)
+
+## GHCI Commands
+Add module search path: `:set -iC:\Documents\src\`
 
 ## Lists
 To join two list you can use `++` operator. To append element at the beginning of a list `x:xs` use `:`.
