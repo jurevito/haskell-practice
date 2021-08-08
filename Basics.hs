@@ -1,3 +1,4 @@
+
 -- simple functions
 doubleMe x = x + x
 doubleUs x y = x*2 + y*2
@@ -57,3 +58,8 @@ myZipWith f (x:xs) (y:ys) = f x y : myZipWith f xs ys
 -- implement max using fold
 myMaxWithFold :: (Ord a) => [a] -> a
 myMaxWithFold = foldl1 (\acc x -> if x > acc then x else acc)
+
+fib :: Int -> Int 
+fib 1 = 1
+fib 2 = 1
+fib n = fib (n-1) + fib (n-2)
