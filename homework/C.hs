@@ -1,3 +1,10 @@
+module Homework.C
+(
+    skips,
+    localMaxima,
+    histogram
+) where
+
 import qualified Data.Map as M
 import qualified Data.List as L
 

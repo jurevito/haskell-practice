@@ -1,5 +1,12 @@
--- Testing credit card number validity
+module Homework.A
+(
+    doubleEveryOther,
+    sumDigits,
+    validate,
+    hanoi
+) where
 
+-- Testing credit card number validity
 toDigits :: Integer -> [Integer]
 toDigits = reverse . toDigitsRev
 
@@ -18,7 +25,6 @@ validate :: Integer -> Bool
 validate xs = (sumDigits $ doubleEveryOther $ toDigits xs) `mod` 10 == 0
 
 -- The towers of Hanoi
-
 type Peg = String
 type Move = (Peg, Peg)
 

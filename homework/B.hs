@@ -1,7 +1,16 @@
-{-# OPTIONS_GHC -Wall #-}
-module LogAnalysis where
+module Homework.B
+(
+    parseMessage,
+    parse,
+    insert,
+    build,
+    inOrder,
+    whatWentWrong
+) where
+
 import SupportFiles.Log
 
+-- TODO replace '!!' and 'head' because they are partial functions
 parseMessage :: String -> LogMessage
 parseMessage [] = Unknown ""
 parseMessage (x:xs)
