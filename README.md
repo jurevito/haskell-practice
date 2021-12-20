@@ -5,8 +5,8 @@ Repository for learning to code in Haskell. Good resources for learning:
 - Paper on functional language: [Why Functional Programming Matters](https://academic.oup.com/comjnl/article-pdf/32/2/98/1445644/320098.pdf)
 
 ## GHCI and Cabal Commands
-Add module search path: `:set -iC:\Documents\src\`
-Building and running project in cabal: `cabal build` and `cabal run`
+- Add module search path: `:set -iC:\Documents\src\`
+- Building and running project in cabal: `cabal build` and `cabal run`
 
 ## Lists
 To join two list you can use `++` operator. To append element at the beginning of a list `x:xs` use `:`.
