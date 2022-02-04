@@ -7,7 +7,8 @@ Repository for learning to code in Haskell. Good resources for learning:
 ## GHCI Commands
 - Call cmd command: `:! cls`
 - Add module search path: `:set -i{path}`
-- Load module: `:load {module name}`
+- Change directory: `:cd {dir}`
+- Load module: `:load {file name}`
 
 ## Cabal Commands
 - Cabal init: `cabal init -l MIT`

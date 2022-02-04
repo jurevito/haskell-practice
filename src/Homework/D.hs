@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Use map" #-}
 module Homework.D
 (
     fun1,
@@ -25,7 +27,7 @@ fun1' :: [Integer] -> Integer
 fun1' = foldl (\acc x -> if even x then acc * (x-2) else acc) 1
 
 fun2' :: Integer -> Integer
-fun2' = sum . filter (even) . takeWhile (/=1) . iterate (\x -> if even x then x `div` 2 else 3 * x + 1)
+fun2' = sum . filter even . takeWhile (/=1) . iterate (\x -> if even x then x `div` 2 else 3 * x + 1)
 
 -- Exercise 2: Folding with trees
 --data Tree a = Leaf | Node Integer (Tree a) a (Tree a) deriving (Show, Eq)
