@@ -4,9 +4,16 @@ Repository for learning to code in Haskell. Good resources for learning:
 - Lectures and homework assignments: [Some university lectures 2013](https://www.seas.upenn.edu/~cis194/spring13/lectures.html)
 - Paper on functional language: [Why Functional Programming Matters](https://academic.oup.com/comjnl/article-pdf/32/2/98/1445644/320098.pdf)
 
-## GHCI and Cabal Commands
-- Add module search path: `:set -iC:\Documents\src\`
-- Building and running project in cabal: `cabal build` and `cabal run`
+## GHCI Commands
+- Call cmd command: `:! cls`
+- Add module search path: `:set -i{path}`
+- Load module: `:load {module name}`
+
+## Cabal Commands
+- Cabal init: `cabal init -l MIT`
+- Build executable: `cabal build {executable}`
+- Run executable: `exec {executable}`
+- Build executable and run it: `cabal run`
 
 ## Lists
 To join two list you can use `++` operator. To append element at the beginning of a list `x:xs` use `:`.

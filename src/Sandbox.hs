@@ -1,3 +1,4 @@
+module Sandbox where
 
 -- simple functions
 doubleMe x = x + x
@@ -63,3 +64,6 @@ fib :: Int -> Int
 fib 1 = 1
 fib 2 = 1
 fib n = fib (n-1) + fib (n-2)
+
+countCharacter :: Char -> String -> Int
+countCharacter c = foldr (\x acc -> if x == c then acc+1 else acc) 0
