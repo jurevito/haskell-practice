@@ -19,7 +19,7 @@ fun1 (x:xs)
 
 fun2 :: Integer -> Integer
 fun2 1 = 0
-fun2 n 
+fun2 n
     | even n = n + fun2 (n `div` 2)
     | otherwise = fun2 (3 * n + 1)
 
@@ -30,14 +30,25 @@ fun2' :: Integer -> Integer
 fun2' = sum . filter even . takeWhile (/=1) . iterate (\x -> if even x then x `div` 2 else 3 * x + 1)
 
 -- Exercise 2: Folding with trees
---data Tree a = Leaf | Node Integer (Tree a) a (Tree a) deriving (Show, Eq)
---
---insertBalanced :: Integer -> a -> Tree a -> Tree a
---insertBalanced n value Leaf = Node n Leaf value Leaf
---insertBalanced n value Node
---
---foldTree :: [a] -> Tree a
---foldTree = foldr (\x acc -> insertBalanced 0 x acc) Leaf
+data Tree a = Leaf | Node Integer (Tree a) a (Tree a) deriving (Show, Eq)
+
+treeHeight :: Tree a -> Integer
+treeHeight Leaf = 0
+treeHeight (Node h _ _ _) = h
+
+insertBalanced :: a -> Tree a -> Tree a
+insertBalanced x Leaf = Node 0 Leaf x Leaf
+insertBalanced x (Node h left value right)
+    | h1 < h2   = Node h (insertBalanced x left) value right 
+    | h1 > h2   = Node h left value t2n 
+    | otherwise = Node (h+1) left value t2n  
+  where h1  = treeHeight left
+        h2  = treeHeight right
+        t2n = insertBalanced x right
+        h   = treeHeight t2n     -- might stay the same
+     
+foldTree :: [a] -> Tree a
+foldTree = foldr insertBalanced Leaf
 
 -- Exercise 3: More folds!
 xor :: [Bool] -> Bool
